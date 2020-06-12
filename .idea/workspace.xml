@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="526982ee-af7b-4687-8a01-fb654feba804" name="Default Changelist" comment="" />
+    <list default="true" id="526982ee-af7b-4687-8a01-fb654feba804" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DailyNewsSpyder/middlewares.py" beforeDir="false" afterPath="$PROJECT_DIR$/DailyNewsSpyder/middlewares.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DailyNewsSpyder/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/DailyNewsSpyder/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DailyNewsSpyder/spiders/dailynews.py" beforeDir="false" afterPath="$PROJECT_DIR$/DailyNewsSpyder/spiders/dailynews.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/news.txt" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,7 +28,11 @@
     <expand />
     <select />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1d8kQqkY5PzAoRxRTdbJHNXDgqg" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -44,7 +55,9 @@
       <updated>1591814095018</updated>
       <workItem from="1591814096653" duration="483000" />
       <workItem from="1591822530345" duration="10429000" />
-      <workItem from="1591847762670" duration="4337000" />
+      <workItem from="1591847762670" duration="4641000" />
+      <workItem from="1591895533351" duration="1697000" />
+      <workItem from="1591902628804" duration="10717000" />
     </task>
     <servers />
   </component>
@@ -52,9 +65,13 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2002" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1591847763672">
+    <state x="2002" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1591902628589">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
-    <state x="2002" y="344" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1591847763672" />
+    <state x="2002" y="344" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1591902628589" />
+    <state x="1989" y="225" key="search.everywhere.popup" timestamp="1591896070183">
+      <screen x="1366" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1989" y="225" key="search.everywhere.popup/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1591896070183" />
   </component>
 </project>

@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="526982ee-af7b-4687-8a01-fb654feba804" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DailyNewsSpyder/constants/scrapingStructure.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DailyNewsSpyder/helpers/ScrapingSiteHelper.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DailyNewsSpyder/middlewares.py" beforeDir="false" afterPath="$PROJECT_DIR$/DailyNewsSpyder/middlewares.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DailyNewsSpyder/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/DailyNewsSpyder/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DailyNewsSpyder/spiders/dailynews.py" beforeDir="false" afterPath="$PROJECT_DIR$/DailyNewsSpyder/spiders/dailynews.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/news.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +26,13 @@
     <expand />
     <select />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -43,6 +48,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\tawa05\PycharmProjects\DailyNewsSpyder\DailyNewsSpyder" />
+    </key>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -57,7 +67,10 @@
       <workItem from="1591822530345" duration="10429000" />
       <workItem from="1591847762670" duration="4641000" />
       <workItem from="1591895533351" duration="1697000" />
-      <workItem from="1591902628804" duration="10717000" />
+      <workItem from="1591902628804" duration="10949000" />
+      <workItem from="1592114252832" duration="1050000" />
+      <workItem from="1592364283381" duration="120000" />
+      <workItem from="1592877289974" duration="558000" />
     </task>
     <servers />
   </component>
@@ -65,10 +78,14 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2002" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1591902628589">
+    <state x="2106" y="275" key="FileChooserDialogImpl" timestamp="1592364402321">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
-    <state x="2002" y="344" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1591902628589" />
+    <state x="2106" y="275" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1592364402321" />
+    <state x="2002" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1592364287676">
+      <screen x="1366" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2002" y="344" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1592364287676" />
     <state x="1989" y="225" key="search.everywhere.popup" timestamp="1591896070183">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>

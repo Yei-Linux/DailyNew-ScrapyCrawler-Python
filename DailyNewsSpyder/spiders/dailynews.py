@@ -2,14 +2,27 @@ import scrapy
 from scrapy_splash import SplashRequest
 import cfscrape
 from fake_useragent import UserAgent
+from dotenv import load_dotenv
+import os
 
 from DailyNewsSpyder.constants.scrapingStructure import ScrapingStructure
 from DailyNewsSpyder.helpers.ScrapingSiteHelper import ScrapingSiteHelper
+from DailyNewsSpyder.config.DatabaseConfig import DatabaseConfig
 
 class DailyNews(scrapy.Spider):
     name = "dailynews"
 
+    @staticmethod
+    def resetCollectionToStoreNewData():
+        load_dotenv()
+        db = DatabaseConfig()
+        isTruncate = int(os.getenv('IS_TRUNCATE'))
+        if isTruncate == 1 :
+            db.resetCollection('news')
+
     def start_requests(self):
+        DailyNews.resetCollectionToStoreNewData()
+
         user_agent = UserAgent().random
         scraperSites = ScrapingStructure.getStructure()
 

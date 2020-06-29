@@ -2,10 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="526982ee-af7b-4687-8a01-fb654feba804" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/DailyNewsSpyder/constants/scrapingStructure.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DailyNewsSpyder/helpers/ScrapingSiteHelper.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DailyNewsSpyder/config/DatabaseConfig.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DailyNewsSpyder/helpers/CleanDataHelper.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DailyNewsSpyder/spiders/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/DailyNewsSpyder.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DailyNewsSpyder.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DailyNewsSpyder/helpers/ScrapingSiteHelper.py" beforeDir="false" afterPath="$PROJECT_DIR$/DailyNewsSpyder/helpers/ScrapingSiteHelper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DailyNewsSpyder/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/DailyNewsSpyder/items.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DailyNewsSpyder/spiders/dailynews.py" beforeDir="false" afterPath="$PROJECT_DIR$/DailyNewsSpyder/spiders/dailynews.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bbc.txt" beforeDir="false" afterPath="$PROJECT_DIR$/bbc.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cnet.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cnet.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/technology-org.txt" beforeDir="false" afterPath="$PROJECT_DIR$/technology-org.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/theverge.txt" beforeDir="false" afterPath="$PROJECT_DIR$/theverge.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,19 +46,24 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1d8kQqkY5PzAoRxRTdbJHNXDgqg" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\tawa05\PycharmProjects\DailyNewsSpyder\DailyNewsSpyder\spiders" />
       <recent name="C:\Users\tawa05\PycharmProjects\DailyNewsSpyder\DailyNewsSpyder" />
     </key>
   </component>
@@ -71,21 +85,39 @@
       <workItem from="1592114252832" duration="1050000" />
       <workItem from="1592364283381" duration="120000" />
       <workItem from="1592877289974" duration="558000" />
+      <workItem from="1593018483381" duration="1284000" />
+      <workItem from="1593020544792" duration="1262000" />
+      <workItem from="1593444537685" duration="1870000" />
+      <workItem from="1593449216154" duration="4585000" />
+      <workItem from="1593453831395" duration="4986000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="2106" y="275" key="FileChooserDialogImpl" timestamp="1592364402321">
+    <state x="2099" y="310" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1593453061377">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
+    <state x="2099" y="310" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1593453061377" />
+    <state x="526" y="193" key="FileChooserDialogImpl" timestamp="1593020601747">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="526" y="193" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1593020601747" />
     <state x="2106" y="275" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1592364402321" />
-    <state x="2002" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1592364287676">
+    <state x="1827" y="162" key="SettingsEditor" timestamp="1593453959619">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
-    <state x="2002" y="344" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1592364287676" />
+    <state x="1827" y="162" key="SettingsEditor/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1593453959619" />
+    <state x="2002" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1593453840802">
+      <screen x="1366" y="0" width="1920" height="1040" />
+    </state>
+    <state x="452" y="241" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1593449234189" />
+    <state x="2002" y="344" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1593453840802" />
     <state x="1989" y="225" key="search.everywhere.popup" timestamp="1591896070183">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>

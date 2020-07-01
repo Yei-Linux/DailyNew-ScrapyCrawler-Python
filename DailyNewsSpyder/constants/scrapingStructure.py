@@ -73,7 +73,7 @@ class ScrapingStructure():
                             "header": 'div.technology-org-top-category-tag-content a.technology-org-news-link::text',
                             "description": 'div.technology-org-excerpt::text',
                             "newUrl": 'div.technology-org-top-category-tag-content a.technology-org-news-link::attr("href")',
-                            'imageUrl': 'div.technology-org-summary-picture a img::attr("src")'
+                            'imageUrl': 'div.technology-org-summary-picture a img::attr("data-src")'
                         },
                         "needJs": False,
                         "needIUAM": True,

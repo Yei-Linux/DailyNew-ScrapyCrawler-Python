@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="526982ee-af7b-4687-8a01-fb654feba804" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/DailyNewsSpyder/config/DatabaseConfig.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DailyNewsSpyder/helpers/CleanDataHelper.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DailyNewsSpyder/spiders/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/DailyNewsSpyder.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DailyNewsSpyder.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DailyNewsSpyder/helpers/ScrapingSiteHelper.py" beforeDir="false" afterPath="$PROJECT_DIR$/DailyNewsSpyder/helpers/ScrapingSiteHelper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DailyNewsSpyder/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/DailyNewsSpyder/items.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DailyNewsSpyder/spiders/dailynews.py" beforeDir="false" afterPath="$PROJECT_DIR$/DailyNewsSpyder/spiders/dailynews.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bbc.txt" beforeDir="false" afterPath="$PROJECT_DIR$/bbc.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cnet.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cnet.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/technology-org.txt" beforeDir="false" afterPath="$PROJECT_DIR$/technology-org.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/theverge.txt" beforeDir="false" afterPath="$PROJECT_DIR$/theverge.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DailyNewsSpyder/constants/scrapingStructure.py" beforeDir="false" afterPath="$PROJECT_DIR$/DailyNewsSpyder/constants/scrapingStructure.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +78,8 @@
       <workItem from="1593020544792" duration="1262000" />
       <workItem from="1593444537685" duration="1870000" />
       <workItem from="1593449216154" duration="4585000" />
-      <workItem from="1593453831395" duration="4986000" />
+      <workItem from="1593453831395" duration="5365000" />
+      <workItem from="1593640434243" duration="6026000" />
     </task>
     <servers />
   </component>
@@ -113,11 +103,11 @@
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
     <state x="1827" y="162" key="SettingsEditor/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1593453959619" />
-    <state x="2002" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1593453840802">
+    <state x="2002" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1593640445103">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
     <state x="452" y="241" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1593449234189" />
-    <state x="2002" y="344" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1593453840802" />
+    <state x="2002" y="344" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1593640445103" />
     <state x="1989" y="225" key="search.everywhere.popup" timestamp="1591896070183">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>

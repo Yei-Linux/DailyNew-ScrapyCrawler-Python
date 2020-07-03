@@ -12,11 +12,13 @@ class ScrapingStructure():
                             "header": 'div div.c-entry-box--compact__body h2.c-entry-box--compact__title a::text',
                             "description": 'div div.c-entry-box--compact__body h2.c-entry-box--compact__title a::text',
                             "newUrl": 'div div.c-entry-box--compact__body h2.c-entry-box--compact__title a::attr("href")',
-                            'imageUrl': 'div a div img::attr("src")'
+                            'imageUrl': 'div a.c-entry-box--compact__image-wrapper div.c-entry-box--compact__image img::attr("src")'
                         },
                         "needJs": False,
                         "needIUAM": False,
-                        "script":""
+                        "script":"",
+                        "imageCurrentValue": "",
+                        "imageValueToReplace":""
                     },
                     {
                         "siteName": 'cnet',
@@ -27,11 +29,13 @@ class ScrapingStructure():
                             "header": 'div.assetText h3 a.assetHed::text',
                             "description": 'div.assetText p a.assetHed::text',
                             "newUrl": 'div.assetText h3 a.assetHed::attr("href")',
-                            'imageUrl': 'div.assetThumb a figure img::attr("src")'
+                            'imageUrl': 'div.assetThumb a figure img::attr("data-original")'
                         },
                         "needJs": False,
                         "needIUAM": False,
-                        "script": ""
+                        "script": "",
+                        "imageCurrentValue": "",
+                        "imageValueToReplace": ""
                     },
                     {
                         "siteName": 'bbc',
@@ -42,7 +46,7 @@ class ScrapingStructure():
                             "header": 'h3.lx-stream-post__header-title a.qa-heading-link span.lx-stream-post__header-text::text',
                             "description": 'div.lx-stream-post-body p.qa-sty-summary::text',
                             "newUrl": 'div.lx-stream-post-body a.lx-stream-asset__cta::attr("href")',
-                            'imageUrl': 'div.lx-media-asset__image img::attr("src")'
+                            'imageUrl': 'div.lx-media-asset__image img::attr("data-src")'
                         },
                         "needJs": True,
                         "needIUAM": False,
@@ -62,7 +66,9 @@ class ScrapingStructure():
                                     html = splash:html(),
                                 }
                             end
-                        """
+                        """,
+                        "imageCurrentValue": "{width}",
+                        "imageValueToReplace": "240"
                     },
                     {
                         "siteName": 'technology-org',
@@ -77,7 +83,9 @@ class ScrapingStructure():
                         },
                         "needJs": False,
                         "needIUAM": True,
-                        "script": ""
+                        "script": "",
+                        "imageCurrentValue": "",
+                        "imageValueToReplace": ""
                     }
                 ]
 

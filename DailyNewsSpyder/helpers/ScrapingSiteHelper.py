@@ -17,11 +17,15 @@ class ScrapingSiteHelper():
             imageUrl = article.css(site['components']['imageUrl']).get()
 
             if header is not None and description is not None and newUrl is not None and imageUrl is not None:
+
+                if site['imageCurrentValue'] != "" and site['imageValueToReplace'] != "":
+                    imageUrl = CleanDataHelper.replaceStrangeCharacteres(imageUrl, site['imageCurrentValue'],site['imageValueToReplace'])
+
                 dataJson = dict(
                     title= CleanDataHelper.deleteMultipleWhiteSpaces(header),
                     description= CleanDataHelper.deleteMultipleWhiteSpaces(description),
                     urlImage= CleanDataHelper.deleteMultipleWhiteSpaces(imageUrl),
-                    url= CleanDataHelper.deleteMultipleWhiteSpaces(newUrl) ,
+                    url= CleanDataHelper.deleteMultipleWhiteSpaces(newUrl),
                     postDate=str(datetime.datetime.now())
                 )
                 ScrapingSiteHelper.insertDataToDb(dataJson)

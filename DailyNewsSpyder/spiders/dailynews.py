@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 import os
 
 from DailyNewsSpyder.constants.scrapingStructure import ScrapingStructure
-from DailyNewsSpyder.helpers.ScrapingSiteHelper import ScrapingSiteHelper
+from DailyNewsSpyder.helpers.ScrapingSiteNewsHelper import ScrapingSiteNewsHelper
 from DailyNewsSpyder.config.DatabaseConfig import DatabaseConfig
 
 class DailyNews(scrapy.Spider):
@@ -24,19 +24,19 @@ class DailyNews(scrapy.Spider):
         DailyNews.resetCollectionToStoreNewData()
 
         user_agent = UserAgent().random
-        scraperSites = ScrapingStructure.getStructure()
+        scraperSites = ScrapingStructure.getStructureNews()
 
         for site in scraperSites:
             if site['needJs']:
                 if site['needIUAM']:
                     token, agent = cfscrape.get_tokens(site['url'], user_agent)
-                    yield SplashRequest(url=site['url'],callback=ScrapingSiteHelper.parseDataBySite,args={'lua_source': site["script"]},endpoint='execute',meta={"site": site},cookies=token, headers={'User-Agent': agent})
+                    yield SplashRequest(url=site['url'],callback=ScrapingSiteNewsHelper.parseDataBySite,args={'lua_source': site["script"]},endpoint='execute',meta={"site": site},cookies=token, headers={'User-Agent': agent})
                 else:
-                    yield SplashRequest(url=site['url'],callback=ScrapingSiteHelper.parseDataBySite,args={'lua_source': site["script"]},endpoint='execute',meta={"site": site})
+                    yield SplashRequest(url=site['url'],callback=ScrapingSiteNewsHelper.parseDataBySite,args={'lua_source': site["script"]},endpoint='execute',meta={"site": site})
             else:
                 if site['needIUAM']:
                     token, agent = cfscrape.get_tokens(site['url'], user_agent)
-                    yield SplashRequest(url=site['url'],callback=ScrapingSiteHelper.parseDataBySite,meta={"site": site},cookies=token, headers={'User-Agent': agent})
+                    yield SplashRequest(url=site['url'],callback=ScrapingSiteNewsHelper.parseDataBySite,meta={"site": site},cookies=token, headers={'User-Agent': agent})
                 else:
-                    yield SplashRequest(url=site['url'], callback=ScrapingSiteHelper.parseDataBySite, meta={"site": site})
+                    yield SplashRequest(url=site['url'], callback=ScrapingSiteNewsHelper.parseDataBySite, meta={"site": site})
 

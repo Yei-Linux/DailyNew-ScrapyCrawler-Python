@@ -1,7 +1,7 @@
 
 class ScrapingStructure():
     @staticmethod
-    def getStructure():
+    def getStructureNews():
       return    [
                     {
                         "siteName": 'theverge',
@@ -86,6 +86,62 @@ class ScrapingStructure():
                         "script": "",
                         "imageCurrentValue": "",
                         "imageValueToReplace": ""
+                    }
+                ]
+
+    @staticmethod
+    def getStructureJobs():
+        return  [
+                    {
+                        "siteName": 'dice',
+                        "url": 'https://www.dice.com/dashboard/login',
+                        "baseUrl": 'https://www.dice.com',
+                        "components": {
+                            "article": '',
+                            "header": '',
+                            "description": '',
+                            "newUrl": '',
+                            'imageUrl': ''
+                        },
+                        "needJs": True,
+                        "needIUAM": False,
+                        "script": """
+                            function main(splash)
+                                if splash.args.cookies then
+                                    splash:init_cookies(splash.args.cookies)
+                                end
+                                assert(splash:go{
+                                    splash.args.url,
+                                    headers=splash.args.headers,
+                                    http_method="POST",
+                                    formdata=splash.args.customData.credentials
+                                })
+                                assert(splash:wait(5))
+                                
+                                local entries = splash:history()
+                                local last_response = entries[#entries].response
+                                
+                                return {
+                                    url = splash:url(),
+                                    headers = last_response.headers,
+                                    http_status = last_response.status,
+                                    cookies = splash:get_cookies(),
+                                    html = splash:html(),
+                                }
+                            end
+                        """,
+                        "hasApi": True,
+                        "api":{
+                            "url":'https://job-search-api.svc.dhigroupinc.com/v1/dice/jobs/search?countryCode2=US&radius=30&radiusUnit=mi&page=1&pageSize=100&facets=employmentType%7CpostedDate%7CworkFromHomeAvailability%7CemployerType%7CeasyApply%7CisRemote&fields=id%7CjobId%7Csummary%7Ctitle%7CpostedDate%7CjobLocation.displayName%7CdetailsPageUrl%7Csalary%7CclientBrandId%7CcompanyPageUrl%7CcompanyLogoUrl%7CpositionId%7CcompanyName%7CemploymentType%7CisHighlighted%7Cscore%7CeasyApply%7CemployerType%7CworkFromHomeAvailability%7CisRemote&culture=en&recommendations=true&interactionId=0&fj=true&includeRemote=true',
+                            "headers": {
+                                "x-api-key": "1YAt0R9wBg4WfsF9VB2778F5CHLAPMVW3WAZcKd8"
+                            }
+                        },
+                        "imageCurrentValue": "",
+                        "imageValueToReplace": "",
+                        "customData":{
+                            "credentials": {'email': 'jesusalvan2010@gmail.com', 'password': 'test_scraping_123'}
+                        }
                     }
                 ]
 

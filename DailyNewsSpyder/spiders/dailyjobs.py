@@ -27,16 +27,17 @@ class DailyJobs(scrapy.Spider):
         scraperSites = ScrapingStructure.getStructureJobs()
 
         for site in scraperSites:
-            if site['needJs']:
-                if site['needIUAM']:
-                    token, agent = cfscrape.get_tokens(site['url'], user_agent)
-                    yield SplashRequest(url=site['url'],callback=ScrapingSiteJobsHelper.parseDataBySite,args={'lua_source': site["script"]},endpoint='execute',meta={"site": site},cookies=token, headers={'User-Agent': agent})
+            if site['enabled']:
+                if site['needJs']:
+                    if site['needIUAM']:
+                        token, agent = cfscrape.get_tokens(site['url'], user_agent)
+                        yield SplashRequest(url=site['url'],callback=ScrapingSiteJobsHelper.parseDataBySite,args={'lua_source': site["script"]},endpoint='execute',meta={"site": site},cookies=token, headers={'User-Agent': agent})
+                    else:
+                        yield SplashRequest(url=site['url'],callback=ScrapingSiteJobsHelper.parseDataBySite,args={'lua_source': site["script"],'customData': site["customData"]},endpoint='execute',meta={"site": site})
                 else:
-                    yield SplashRequest(url=site['url'],callback=ScrapingSiteJobsHelper.parseDataBySite,args={'lua_source': site["script"],'customData': site["customData"]},endpoint='execute',meta={"site": site})
-            else:
-                if site['needIUAM']:
-                    token, agent = cfscrape.get_tokens(site['url'], user_agent)
-                    yield SplashRequest(url=site['url'],callback=ScrapingSiteJobsHelper.parseDataBySite,meta={"site": site},cookies=token, headers={'User-Agent': agent})
-                else:
-                    yield SplashRequest(url=site['url'], callback=ScrapingSiteJobsHelper.parseDataBySite, meta={"site": site})
+                    if site['needIUAM']:
+                        token, agent = cfscrape.get_tokens(site['url'], user_agent)
+                        yield SplashRequest(url=site['url'],callback=ScrapingSiteJobsHelper.parseDataBySite,meta={"site": site},cookies=token, headers={'User-Agent': agent})
+                    else:
+                        yield SplashRequest(url=site['url'], callback=ScrapingSiteJobsHelper.parseDataBySite, meta={"site": site})
 

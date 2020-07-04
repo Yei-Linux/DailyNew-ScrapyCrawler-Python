@@ -9,7 +9,6 @@ class ScrapingSiteJobsHelper():
     @staticmethod
     def parseDataBySite(response):
         site = response.meta.get('site')
-
         if site['hasApi']:
             ScrapingSiteJobsHelper.pageUsingApi(site)
         else:
@@ -18,7 +17,37 @@ class ScrapingSiteJobsHelper():
     @staticmethod
     def pageUsingApi(site):
         response = requests.get(site['api']['url'],headers=site['api']['headers'])
-        print(response.text)
+        responseJson = response.json()
+        jobs = responseJson[site['api']['structure']['firstLevel']]
+
+        for job in jobs:
+            job = ScrapingSiteJobsHelper.validateJobJson(job,site['api']['structure']['fields'])
+
+            header = job[site['api']['structure']['fields']['header']]
+            description = job[site['api']['structure']['fields']['description']]
+            imageUrl = job[site['api']['structure']['fields']['imageUrl']]
+            newUrl = job[site['api']['structure']['fields']['newUrl']]
+
+            dataJson = dict(
+                title=CleanDataHelper.deleteMultipleWhiteSpaces(header),
+                description=CleanDataHelper.deleteMultipleWhiteSpaces(description),
+                urlImage=CleanDataHelper.deleteMultipleWhiteSpaces(imageUrl),
+                url=CleanDataHelper.deleteMultipleWhiteSpaces(newUrl),
+                postDate=str(datetime.datetime.now())
+            )
+            ScrapingSiteJobsHelper.insertDataToDb(dataJson)
+
+    @staticmethod
+    def validateJobJson(job,fields):
+        if fields['header'] not in job.keys():
+            job[fields['header']] = ''
+        if fields['description'] not in job.keys():
+            job[fields['description']] = ''
+        if fields['newUrl'] not in job.keys():
+            job[fields['newUrl']] = ''
+        if fields['imageUrl'] not in job.keys():
+            job[fields['imageUrl']] = ''
+        return job
 
     @staticmethod
     def pageNotUsingApi(response,site):
@@ -26,7 +55,10 @@ class ScrapingSiteJobsHelper():
             header = article.css(site['components']['header']).get()
             description = article.css(site['components']['description']).get()
             newUrl = ScrapingSiteJobsHelper.format_url(article.css(site['components']['newUrl']).get(), site['baseUrl'])
-            imageUrl = article.css(site['components']['imageUrl']).get()
+            if site['hasImage']:
+                imageUrl = article.css(site['components']['imageUrl']).get()
+            else:
+                imageUrl = ""
 
             if header is not None and description is not None and newUrl is not None and imageUrl is not None:
 
@@ -51,7 +83,7 @@ class ScrapingSiteJobsHelper():
     @staticmethod
     def insertDataToDb(data):
         db = DatabaseConfig()
-        newsColection = db.getCollection('news')
+        newsColection = db.getCollection('jobs')
         newsColection.insert_one(data)
         print('Inserted Correctly')
 

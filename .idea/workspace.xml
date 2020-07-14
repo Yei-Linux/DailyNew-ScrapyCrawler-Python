@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="526982ee-af7b-4687-8a01-fb654feba804" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/DailyNewsSpyder/helpers/ScrapingWikipediaHelper.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DailyNewsSpyder/spiders/wikipediaSpider.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DailyNewsSpyder/constants/scrapingStructure.py" beforeDir="false" afterPath="$PROJECT_DIR$/DailyNewsSpyder/constants/scrapingStructure.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DailyNewsSpyder/helpers/ScrapingSiteJobsHelper.py" beforeDir="false" afterPath="$PROJECT_DIR$/DailyNewsSpyder/helpers/ScrapingSiteJobsHelper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DailyNewsSpyder/spiders/dailyjobs.py" beforeDir="false" afterPath="$PROJECT_DIR$/DailyNewsSpyder/spiders/dailyjobs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DailyNewsSpyder/helpers/CleanDataHelper.py" beforeDir="false" afterPath="$PROJECT_DIR$/DailyNewsSpyder/helpers/CleanDataHelper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dice.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dice.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +88,8 @@
       <workItem from="1593727376618" duration="9241000" />
       <workItem from="1593787186618" duration="28097000" />
       <workItem from="1593871480284" duration="17053000" />
+      <workItem from="1594137098809" duration="34000" />
+      <workItem from="1594687843261" duration="7503000" />
     </task>
     <servers />
   </component>
@@ -99,20 +104,20 @@
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
     <state x="2099" y="310" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1593453061377" />
-    <state x="526" y="193" key="FileChooserDialogImpl" timestamp="1593020601747">
+    <state x="526" y="193" key="FileChooserDialogImpl" timestamp="1594137130782">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="526" y="193" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1593020601747" />
+    <state x="526" y="193" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1594137130782" />
     <state x="2106" y="275" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1592364402321" />
     <state x="328" y="13" key="SettingsEditor" timestamp="1593888866827">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="328" y="13" key="SettingsEditor/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1593888866827" />
     <state x="1827" y="162" key="SettingsEditor/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1593453959619" />
-    <state x="2002" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1593871540252">
-      <screen x="1366" y="0" width="1920" height="1040" />
+    <state x="452" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1594137106388">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="452" y="241" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1593449234189" />
+    <state x="452" y="241" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1594137106388" />
     <state x="2002" y="344" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1593871540252" />
     <state x="1989" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1593794638728">
       <screen x="1366" y="0" width="1920" height="1040" />

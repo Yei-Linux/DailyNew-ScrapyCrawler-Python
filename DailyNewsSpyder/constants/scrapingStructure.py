@@ -257,4 +257,39 @@ class ScrapingStructure():
                         "enabled": True
                     }
                 ]
+    @staticmethod
+    def getStructureWikipedia():
+        return [
+            {
+                "siteName": 'wikipedia',
+                "url": 'https://es.wikipedia.org/wiki/Scrum_(desarrollo_de_software)',
+                "baseUrl": 'https://es.wikipedia.org/wiki',
+                "components": {
+                    "subTitle": 'span.mw-headline::attr(id)',
+                    "content": 'p'
+                },
+                "needJs": False,
+                "needIUAM": False,
+                "script": "",
+                "hasApi": False,
+                "api": {
+                    "url": '',
+                    "headers": {},
+                    "structure": {
+                        "firstLevel": "",
+                        "fields": {
+                            "header": '',
+                            "description": '',
+                            "newUrl": '',
+                            "imageUrl": ''
+                        }
+                    }
+                },
+                "hasImage": True,
+                "imageCurrentValue": "",
+                "imageValueToReplace": "",
+                "customData": {},
+                "enabled": True
+            }
+        ]
 
